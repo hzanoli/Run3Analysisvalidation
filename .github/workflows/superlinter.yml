@@ -42,4 +42,5 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: master
+          PYTHON_ISORT_CONFIG_FILE: superlinter.yml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
