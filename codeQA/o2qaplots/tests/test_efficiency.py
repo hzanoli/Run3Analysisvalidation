@@ -34,7 +34,8 @@ def test_calculate_efficiency(
     generated=make_3d_with_fixed_value(n_fill=600 * 1000.0),
     reconstructed=make_3d_with_fixed_value(n_fill=0.7 * 600 * 1000.0),
 ):
-    """Creates a generated and reconstructed histogram with 0.7 efficiency and calculates it."""
+    """Creates a generated and reconstructed histogram with 0.7 efficiency
+    and calculates it."""
 
     efficiency = eff.calculate_efficiency(reconstructed, generated)
 

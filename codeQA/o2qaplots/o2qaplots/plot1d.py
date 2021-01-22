@@ -1,5 +1,3 @@
-import typing
-
 import ROOT
 
 import o2qaplots.plot as plot

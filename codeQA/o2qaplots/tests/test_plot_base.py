@@ -1,5 +1,3 @@
-import pytest
-
 import o2qaplots.plot_base as plot_base
 
 
@@ -36,8 +34,8 @@ def test_argument_reading():
 
 
 def test_root_obj_include_task_argument():
-    """Tests if plot_base.ROOTObj.with_input does the correct routing when including the input
-    arguments."""
+    """Tests if plot_base.ROOTObj.with_input does the correct routing when
+    including the input arguments."""
 
     no_folder = plot_base.ROOTObj("some-object")
     assert no_folder.with_input() is no_folder

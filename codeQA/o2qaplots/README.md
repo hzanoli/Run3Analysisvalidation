@@ -11,20 +11,19 @@ In order to run the QA plotting, you can check the available commands by running
 
     o2qa --help
 
-You can also get more information for each option, such as 
+You can also get more information for each option, such as
 
     o2qa plot --help
 
 ## Run the scripts without installing
 
-You can run the script directly. This will require you to run python in the correct directory 
+You can run the script directly. This will require you to run python in the correct directory
 (the same one that has the setup.py and this README file). Go to the folder containing this file
 and run:
 
     python o2qaplots/cli.py --help.
 
-The same instructions as for `Install the package in your system` apply here to check the available 
-commands.
+The same instructions as for `Install the package in your system` apply here to check the available commands.
 
 ## Run in a (docker) container
 

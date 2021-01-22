@@ -39,11 +39,7 @@ class ImpactParameter(pb.PlottingTask):
     ]
 
     show_fits = Configurable(
-        "--show-fits",
-        "-sf",
-        action="store_true",
-        default=False,
-        help="",
+        "--show-fits", "-sf", action="store_true", default=False, help="",
     )
 
     plotting_function = plot_1d_legend
@@ -56,13 +52,12 @@ class ImpactParameter(pb.PlottingTask):
         }
 
 
-def calculate_ip_resolution(ip_vs_var, fast_bootstrap=False):
+def calculate_ip_resolution(ip_vs_var):
     """Calculates the impact parameter (ip) resolution vs a particular variable.
 
     Args:
-        ip_vs_var: a ROOT TH2 histogram with the ip in the y axis and the dependent variable in the x axis.
-        fast_bootstrap: if true, the points are smeared assuming a gaussian distribution. If not, no assumption is
-            made and the distribution is sampled and filled with the same amout of entries.
+        ip_vs_var: a ROOT TH2 histogram with the ip in the y axis and the
+            dependent variable in the x axis.
     """
 
     ROOT.TH1.AddDirectory(False)

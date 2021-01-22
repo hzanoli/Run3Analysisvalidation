@@ -1,4 +1,3 @@
-import pytest
 import ROOT
 import os
 
@@ -21,10 +20,10 @@ def test_discover_root_objects():
     )
 
     assert set(plots) == {
-        "/um",
-        "/dois/tres",
-        "/quatro/cinco/seis",
-        "/quatro/cinco/sete/oito",
+        "um",
+        "dois/tres",
+        "quatro/cinco/seis",
+        "quatro/cinco/sete/oito",
     }
 
     os.remove("test_file.root")

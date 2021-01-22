@@ -32,13 +32,16 @@ def calculate_efficiency(
     epsilon = 0.0001
 
     if eta_cut is not None:
-        generated.GetYaxis().SetRangeUser(-eta_cut + epsilon, eta_cut - epsilon)
-        reconstructed.GetYaxis().SetRangeUser(-eta_cut + epsilon, eta_cut - epsilon)
+        generated.GetYaxis().SetRangeUser(-1.0 * eta_cut + epsilon, eta_cut - epsilon)
+        reconstructed.GetYaxis().SetRangeUser(
+            -1.0 * eta_cut + epsilon, eta_cut - epsilon
+        )
 
     if pt_range is not None:
         if len(pt_range) != 2:
             raise ValueError(
-                "You should pass exactly two values to the transverse momentum range (pt_range)."
+                "You should pass exactly two values to the transverse momentum"
+                "range (pt_range)."
             )
 
         generated.GetXaxis().SetRangeUser(pt_range[0] + epsilon, pt_range[1] - epsilon)

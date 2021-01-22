@@ -1,11 +1,10 @@
-import argparse
 import os
 import os.path
 import pathlib
 
 import ROOT
 
-from o2qaplots.config import JsonConfig, PlotConfig
+from o2qaplots.config import PlotConfig
 
 ROOT.TH1.AddDirectory(False)
 
@@ -154,10 +153,7 @@ def _build_legend(canvas, labels):
 
 
 def plot_2d(
-    histogram,
-    draw_option="colz1",
-    labels=None,
-    plot_config=None,
+    histogram, draw_option="colz1", labels=None, plot_config=None,
 ):
     """Plot a list of histograms to a canvas. """
     canvas = ROOT.TCanvas()
