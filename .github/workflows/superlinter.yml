@@ -40,9 +40,10 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v3
         env:
+          LINTER_RULES_PATH: .
+          PYTHON_ISORT_CONFIG_FILE: pyproject.toml
           VALIDATE_ALL_CODEBASE: true
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-          LINTER_RULES_PATH: /
-          PYTHON_ISORT_CONFIG_FILE: .pyproject.toml
+
