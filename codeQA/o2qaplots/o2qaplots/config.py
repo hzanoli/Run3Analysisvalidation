@@ -19,7 +19,9 @@ class AxisConfig:
         self.log = log
 
     def __repr__(self):
-        return f"<{self.__class__.__name__} view_range={self.view_range} log={self.log}>"
+        return (
+            f"<{self.__class__.__name__} view_range={self.view_range} log={self.log}>"
+        )
 
 
 class PlotConfig:
@@ -34,8 +36,12 @@ class PlotConfig:
         y_axis:  an AxisConfig with for the axis, or a dict to be passed to the constructor of AxisConfig
 
     """
-    def __init__(self, x_axis: typing.Union[AxisConfig, dict] = AxisConfig(),
-                 y_axis: typing.Union[AxisConfig, dict] = AxisConfig()):
+
+    def __init__(
+        self,
+        x_axis: typing.Union[AxisConfig, dict] = AxisConfig(),
+        y_axis: typing.Union[AxisConfig, dict] = AxisConfig(),
+    ):
         if not isinstance(x_axis, AxisConfig):
             x_axis = AxisConfig(**x_axis)
 
@@ -50,7 +56,7 @@ class PlotConfig:
 
 
 class JsonConfig(dict):
-    """"Class used to read and store the JSON configuration files.
+    """ "Class used to read and store the JSON configuration files.
     It reads the configuration from the JSON file and it stores it in as a dictionary. The values of the dictionary
     are automatically converted into an PlotConfig.
     In case the configuration is not set for a particular object, this configuration will return a PlotConfig with its
@@ -67,7 +73,7 @@ class JsonConfig(dict):
             super(JsonConfig, self).__init__()
 
     def get(self, key):
-        """ Get the configuration from a particular object
+        """Get the configuration from a particular object
 
         Args:
             key: key (name) of the object

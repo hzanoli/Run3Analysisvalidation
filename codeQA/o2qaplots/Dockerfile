@@ -1,14 +1,19 @@
-FROM continuumio/miniconda:latest
+FROM centos:7
 
-COPY environment.yml .
-RUN conda env create -f environment.yml
+SHELL ["/bin/bash", "-c"]
 
-SHELL ["conda", "run", "-n", "o2qa", "/bin/bash", "-c"]
+# Install ROOT
+RUN yum install -y epel-release \
+    && yum install -y \
+    python3 \
+    python3-root \
+    root \
+    && yum clean all \
+    && rm -rf /var/cache/yum
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY requirements.txt /requirements/requirements.txt
+
+RUN pip3 install -r /requirements/requirements.txt
 
 COPY . /o2qaplots
-
-WORKDIR /o2qaplots
-RUN pip3 install -e .
+RUN pip3 install -e /o2qaplots/. --no-cache-dir
