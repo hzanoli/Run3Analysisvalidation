@@ -1,15 +1,14 @@
 import ROOT
 
 import o2qaplots.plot as pl
-import o2qaplots.plot_base as pb
-from o2qaplots.plot_base import Configurable, ROOTObj, TaskInput, macro
+from o2qaplots.plot_base import Configurable, PlottingTask, ROOTObj, TaskInput, macro
 
 
 def plot_1d_legend(x, *args, **kwargs):
     return pl.plot_1d([x[0][0]], *args, legend=x[0][1], **kwargs)
 
 
-class ImpactParameter(pb.PlottingTask):
+class ImpactParameter(PlottingTask):
     parser_description = (
         "Plots the Impact Parameter resolution in the rphi and z direction. "
         "Currently it can only handle ONE file at at time. This will change soon."
