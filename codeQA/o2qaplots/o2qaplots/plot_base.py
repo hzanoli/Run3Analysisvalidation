@@ -26,10 +26,9 @@ import inspect
 import os
 import typing
 
-import ROOT
-
 import o2qaplots.config as cfg
 import o2qaplots.plot as plot
+import ROOT
 from o2qaplots.file_utils import check_file_exists
 
 default_json = (

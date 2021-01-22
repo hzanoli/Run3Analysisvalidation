@@ -1,6 +1,5 @@
-import ROOT
-
 import o2qaplots.plot as pl
+import ROOT
 from o2qaplots.plot_base import Configurable, PlottingTask, ROOTObj, TaskInput, macro
 
 

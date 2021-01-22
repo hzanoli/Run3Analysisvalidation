@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from o2qaplots.config import AxisConfig, PlotConfig
 
 

@@ -3,7 +3,6 @@ import os.path
 import pathlib
 
 import ROOT
-
 from o2qaplots.config import PlotConfig
 
 ROOT.TH1.AddDirectory(False)

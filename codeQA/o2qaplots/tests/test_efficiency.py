@@ -1,6 +1,5 @@
-import ROOT
-
 import o2qaplots.efficiency.efficiency as eff
+import ROOT
 
 ROOT.TH1.AddDirectory(False)
 

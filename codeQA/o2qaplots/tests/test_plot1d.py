@@ -1,8 +1,7 @@
 import os
 
-import ROOT
-
 import o2qaplots.plot1d as plot1d
+import ROOT
 
 
 def test_discover_root_objects():

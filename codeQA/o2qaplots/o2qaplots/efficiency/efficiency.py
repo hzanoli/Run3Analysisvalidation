@@ -1,7 +1,6 @@
 import typing
 
 import ROOT
-
 from o2qaplots.plot_base import (
     Configurable,
     InputConfigurable,
