@@ -1,6 +1,6 @@
-import ROOT
 import os
 
+import ROOT
 
 import o2qaplots.plot1d as plot1d
 

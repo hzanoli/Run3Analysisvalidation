@@ -3,8 +3,8 @@ import argparse
 import ROOT
 
 from o2qaplots.efficiency.efficiency import Efficiency
+from o2qaplots.plot1d import Plot1D, Plot2D
 from o2qaplots.tracking_resolution.ip.ip import ImpactParameter
-from o2qaplots.plot1d import Plot2D, Plot1D
 
 ROOT.PyConfig.IgnoreCommandLineOptions = True
 
